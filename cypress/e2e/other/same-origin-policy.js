@@ -10,17 +10,4 @@ describe("Cypress web security", () => {
         cy.visit("http://www.webdriveruniversity.com/")
         cy.get('#automation-test-store').invoke('removeAttr', 'target').click();
     });
-    it.only("Origin command", () => {
-        cy.origin('webdriveruniversity.com', () => {
-            cy.visit("/");
-        })
-
-        cy.origin('automationteststore.com', () => {
-            cy.visit("/");
-        })
-
-        cy.visit("http://www.webdriveruniversity.com/");
-        cy.visit("http://selectors.webdriveruniversity.com/");
-
-    });
 })
